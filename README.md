@@ -1,144 +1,106 @@
-## 🩸 Blood Bank Management System (PHP + MySQL)
+# 🗳️ Online Voting System using PHP & MySQLi
 
-### 📘 Overview
+## 📘 Overview
+The **Online Voting System** is a web-based application developed using **PHP** and **MySQLi** that serves as an automated election platform for schools, colleges, or organizations.  
+It simplifies the traditional manual voting process by allowing registered voters to cast their votes online, ensuring faster results and eliminating human error in vote counting.
 
-The **Blood Bank Management System** is a web-based application built using **PHP** and **MySQL** to manage and organize blood donations efficiently.
-It helps **admins** manage donors, blood groups, and contact queries, while **donors/users** can register, search for blood groups, and make donation requests easily.
-
----
-
-### 🧩 Project Modules
-
-The system consists of **two main modules**:
-
-1. **Admin Module**
-2. **User (Donor) Module**
+The system provides two main interfaces:
+1. **Administrator Panel**
+2. **Voter Panel**
 
 ---
 
-## 🧑‍💼 Admin Module
-<img width="1920" height="888" alt="BBDMS-_-Admin-Dashboard" src="https://github.com/user-attachments/assets/75848ae4-1cde-43e3-a09d-5dac99f99e8d" />
+## 👨‍💼 Admin Module
 
-### 🔹 Dashboard
-
-* View total number of blood groups listed.
-* View registered donor list.
-* View total number of enquiries received.
-
-### 🔹 Blood Group Management
-
-* Add new blood group.
-* Delete existing blood group.
-
-### 🔹 Donor Management
-
-* View a complete list of registered donors.
-* Delete or hide donor details if required.
-
-### 🔹 Manage Contact Queries
-
-* View and manage user queries received from the **Contact Us** page.
-
-### 🔹 Manage Pages
-
-* Update website pages (e.g., About Us, Contact, etc.).
-
-### 🔹 Update Contact Information
-
-* Update the contact details displayed on the website.
-
-### 🔹 Request Received by Donor
-
-* View all the blood requests sent by donors.
-
-### 🔹 Account Management
-
-* Update profile.
-* Change password.
-* Recover password (Forgot password functionality).
+### 🔹 Features
+- **Manage Positions:** Add, update, delete, and reorder election positions displayed on the ballot.
+- **Manage Candidates:** Add and manage all election candidates.
+- **Manage Voters:** Create, edit, or delete voter accounts.
+- **Vote Result Monitoring:** Automatically view and tally votes in real-time.
+- **Result Visualization:** View results using **horizontal bar charts**.
+- **Print Results:** Export and print election results in **PDF format**.
+- **Vote Preview:** Allow admins to preview the voting interface.
 
 ---
 
-## 🧍‍♂️ User (Donor) Module
+## 🧑‍🗳️ Voter Module
 
-### 🔹 Home
-<img width="1920" height="4217" alt="Blood-Bank-Donar-Management-System-_-Home-Page" src="https://github.com/user-attachments/assets/b23f7f2c-cc60-4a62-a444-944cd2482893" />
-
-* Welcome page for users and donors.
-* Donors can register themselves to donate blood.
-
-### 🔹 About Us
-
-* View details about the organization or system.
-
-### 🔹 Contact Us
-
-* Send messages or queries to the admin.
-
-### 🔹 Donor List
-<img width="1920" height="1680" alt="BBDMS-_-Donor-List" src="https://github.com/user-attachments/assets/52897d2e-a68f-42e1-ae36-a4c55b56072f" />
-
-* View the list of available donors with their contact details.
-
-### 🔹 Search Donor
-
-* Search donors by **city** and **blood group**.
+### 🔹 Features
+- **Secure Login:** Voters can log in using their credentials.
+- **Vote Casting:** Choose and submit votes for preferred candidates.
+- **Vote Preview:** Review votes before final submission.
+- **Multiple Votes:** Supports elections with multiple voting categories or positions.
+- **Instant Submission:** Once submitted, votes are locked to maintain election integrity.
 
 ---
 
-## 🩸 Registered Donor Features (After Login)
+## ⚙️ Technologies Used
 
-### 🔹 My Account Section
-
-* **Profile:** View and update personal details.
-* **Change Password:** Update login password.
-* **Request Received:** View blood requests sent by users.
-* **Logout:** Securely sign out of the system.
-
----
-
-### ⚙️ Technologies Used
-
-| Component      | Technology                        |
-| :------------- | :-------------------------------- |
-| **Frontend**   | HTML, CSS, JavaScript, Bootstrap  |
-| **Backend**    | Core PHP                          |
-| **Database**   | MySQL                             |
-| **Server**     | XAMPP / Apache                    |
-| **IDE/Editor** | VS Code / Sublime Text / PHPStorm |
+| Component | Technology |
+|------------|-------------|
+| **Frontend** | HTML, CSS, JavaScript, Bootstrap |
+| **Backend** | PHP (MySQLi Extension) |
+| **Database** | MySQL |
+| **Server** | XAMPP / Apache |
+| **IDE/Editor** | Visual Studio Code / Sublime Text |
 
 ---
 
-### 🗄️ Database Tables (Example)
-
-| Table Name      | Description                                               |
-| --------------- | --------------------------------------------------------- |
-| `tbladmin`      | Stores admin login credentials and profile data.          |
-| `tblbloodgroup` | Stores all available blood group types.                   |
-| `tbldonor`      | Stores donor registration details.                        |
-| `tblrequest`    | Stores requests made by donors.                           |
-| `tblcontact`    | Stores contact queries from users.                        |
-| `tblpages`      | Stores website page content (About Us, Contact Us, etc.). |
+## 🗄️ Database Tables (Example)
+| Table Name | Description |
+|-------------|--------------|
+| `positions` | Stores all election positions (e.g., President, Secretary). |
+| `candidates` | Stores candidate details and their assigned positions. |
+| `voters` | Stores registered voters’ information and login credentials. |
+| `votes` | Stores submitted votes per voter and candidate. |
+| `admin` | Stores admin credentials and profile details. |
 
 ---
 
-### 🧠 Key Features
+## 📊 Key Features Summary
 
-✅ Secure Admin and Donor Login
-✅ Add/Edit/Delete Blood Groups
-✅ Donor Registration and Management
-✅ Blood Request Management
-✅ Search Donor by City and Blood Group
-✅ Responsive Design using Bootstrap
-✅ Password Recovery and Update Profile Features
+✅ Vote preview before submission  
+✅ Multiple votes per election cycle  
+✅ Real-time vote tally using bar charts  
+✅ Printable PDF results  
+✅ Dynamic ordering of election positions  
+✅ Full CRUD (Create, Read, Update, Delete) for voters, candidates, and positions  
+✅ Secure authentication system for both admin and voters  
+
+---
+
+## 🧠 Future Enhancements
+- Email or SMS notifications for election results  
+- Two-factor authentication for voters  
+- Blockchain-based vote verification  
+- Mobile-friendly responsive interface  
 
 ---
 
-### 📈 Future Enhancements
+## 🚀 How to Run the Project
 
-* Email notifications for blood requests.
-* Integration of Google Maps for donor location tracking.
-* SMS alerts for emergency blood requirements.
-* Role-based access for hospital staff.
+1. **Download and Install XAMPP** on your system.
+2. **Clone or download** this repository into your `htdocs` folder.
+3. Import the provided **SQL file** into **phpMyAdmin** to create the database.
+4. Update the database credentials in `config.php` file.
+5. Start **Apache** and **MySQL** in XAMPP Control Panel.
+6. Run the project in your browser
+
 
 ---
+
+## 🏁 Conclusion
+This **Online Voting System** provides a modern, fast, and secure solution for managing elections in organizations and institutions.  
+By automating the voting process and result tallying, it ensures transparency, reduces manual effort, and enhances election integrity.
+
+---
+
+### 🖼️ Screenshot Preview
+
+<img width="1920" height="1080" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/d7e7846f-70bf-422e-97fa-3998777d8cb0" />
+
+<img width="1920" height="1080" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/39ddd72f-b362-42a3-9562-f4b8bdd2f550" />
+
+<img width="1920" height="1080" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/19ddf9d8-091d-40ca-86db-0b59777f3a14" />
+
+<img width="1920" height="1080" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/63017e3b-23ec-4730-bd0b-e4bb94b1ced3" />
